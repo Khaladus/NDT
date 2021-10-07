@@ -1,4 +1,4 @@
-# NDT
+# Non-destructive testing of materials using Python and UR5 manipulator
 Software for non-destructive testing of materials using collaborative robot consists of three files: "testing.py", "positiontans.py" and "results.csv". The main aim of the project is to control the robot via Python script and save the data about position coordinates of the robot from controller during the measurements. 
 
 The "results.csv" file stores the data collected during the scanning procedure which includes the timestamp and the six coordinates of the sensor. 
