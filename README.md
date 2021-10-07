@@ -1,2 +1,8 @@
 # NDT
-Software for non-destructive testing of materials using collaborative robot
+Software for non-destructive testing of materials using collaborative robot consists of three files: "testing.py", "positiontans.py" and "results.csv". The main aim of the project is to control the robot via Python script and save the data about position coordinates of the robot from controller during the measurements. 
+
+The "results.csv" file stores the data collected during the scanning procedure which includes the timestamp and the six coordinates of the sensor. 
+
+The posistiontrans script it is created to calculate the translation about given vector from the user of current position in base reference frame. Therefore, it is composed of three classes: Pose, Matrix and AxisAngleMat which create the result of matrices multiplication and give as the result the new coordinates.
+
+The main file "testing" contains the core of the system where structure of the software can be divided into three main parts: a) reading the initial position of the end-effector, b) positioning of the first point, c) scanning procedure. For now, the system is created for rectangular objects, so the sensor records the data from the movement in two dimensions. At the beginning, the host connects with the controller of the robot using TCP/IP protocol. Then, the user is asked to bring the end effector with sensor to the position of right down corner, where the procedure should be started. When the robot is correctly positionen, the user is asked to provide settings of the measurementse e.g. number of points, step etc. Finally the meausrements is performed on the grid proposed by the user and the results are stored into results.csv file. 
